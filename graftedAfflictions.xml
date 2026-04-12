@@ -342,7 +342,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="44,37,27;44,37,27;44,37,27">
-    <!-- Figure out icon colors real values and icon texture -->
+    
     <Effect minstrength="0" maxstrength="100">
       <StatValue stattype="SwimmingSpeed" minvalue="0.4" maxvalue="0.4" />
     </Effect>
@@ -430,7 +430,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="53,78,57;53,78,57;53,78,57">
-    <!-- Figure out icon colors real values and icon texture -->
+    
     <Effect minstrength="0" maxstrength="80" strengthchange="1" />
     <Effect minstrength="80" maxstrength="100" strengthchange="1" ThermalOverlayRange="1000" ThermalOverlayColor="53,78,57">
       <StatusEffect type="OnActive" target="Character" interval="1" disabledeltatime="true" >
@@ -476,7 +476,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="50,3,1;50,3,1;50,3,1">
-  <!-- Figure out icon colors real values and icon texture -->
+  
     <icon texture="%ModDir%/graftedAfflictions.png" sheetindex="5,1" sheetelementsize="128,128" color="0,0,0,0" origin="0,0"/>
 
 
@@ -510,7 +510,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="38,3,1;38,3,1;38,3,1">
-  <!-- Figure out icon colors real values and icon texture -->
+  
     <icon texture="%ModDir%/graftedAfflictions.png" sheetindex="1,1" sheetelementsize="128,128" color="0,0,0,0" origin="0,0"/>
     <Effect minstrength="0" maxstrength="100">
       <StatusEffect target="Character" type="OnActive" interval="1" disabledeltatime="true" >
@@ -543,7 +543,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="38,3,1;38,3,1;38,3,1">
-  <!-- Figure out icon colors real values and icon texture -->
+  
     <icon texture="%ModDir%/graftedAfflictions.png" sheetindex="3,0" sheetelementsize="128,128" color="0,0,0,0" origin="0,0"/>
     <Effect minstrength="0" maxstrength="100">
       <StatusEffect target="Character" type="OnActive" interval="1" disabledeltatime="true" >
@@ -815,7 +815,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="32,32,31;32,32,31;32,32,31">
-    <!-- Figure out icon colors real values and icon texture -->
+    
     <Effect minstrength="0" maxstrength="100">
       <StatValue stattype="SwimmingSpeed" minvalue="0.55" maxvalue="0.55" />
     </Effect>
@@ -937,7 +937,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="140,57,40;140,57,40;140,57,40">
-    <!-- Figure out icon colors real values and icon texture -->
+    
     <Effect minstrength="0" maxstrength="100">
       <StatValue stattype="FlowResistance" minvalue="0.7" maxvalue="0.55" />
     </Effect>
@@ -1105,7 +1105,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="38,11,11;38,11,11;38,11,11">
-    <!-- Figure out icon colors real values and icon texture -->
+    
     <Effect minstrength="0" maxstrength="80" strengthchange="2" />
     <Effect minstrength="80" maxstrength="100" strengthchange="2" >
     </Effect>
@@ -1269,7 +1269,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="15,14,14;15,14,14;15,14,14">
-  <!-- Figure out icon colors real values and icon texture -->
+  
     <icon texture="%ModDir%/graftedAfflictions.png" sheetindex="2,0" sheetelementsize="128,128" color="0,0,0,0" origin="0,0"/>
     <Effect minstrength="0" maxstrength="100" 
       minspeedmultiplier="1.3"
@@ -1499,7 +1499,7 @@
     minstrength="0"
     maxstrength="100"
     iconcolors="223,188,128;223,188,128;223,188,128">
-    <!-- Figure out icon colors real values and icon texture -->
+    
     <icon texture="%ModDir%/graftedAfflictions.png" sheetindex="0,1" sheetelementsize="128,128" color="0,0,0,0" origin="0,0"/>
   </AfflictionHusk>
 

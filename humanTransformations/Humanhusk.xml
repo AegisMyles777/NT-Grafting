@@ -9,7 +9,7 @@
     <huskappendage affliction="naturalmeleeweapon" path="Content/Characters/Humanhusk/Mudraptorbeak.xml" onlyfromafflictions="true" />
     <huskappendage affliction="naturalrangedweapon" path="Content/Characters/Humanhusk/Spinelingspine.xml" onlyfromafflictions="true" />
     <huskappendage affliction="crawlerTailAegis" path="%ModDir%/transplants/limbs/crawler/crawlerTailAppendage.xml" onlyfromafflictions="true" />
-    <huskappendage affliction="hammerheadLimbsAffliction" path="%ModDir%/transplants/limbs/hammerhead/hammerheadLimbsAppendage.xml" onlyfromaffliction="true" />
+    <huskappendage affliction="hammerheadLimbsAffliction" path="%ModDir%/transplants/limbs/hammerhead/hammerheadLimbsAppendage.xml" onlyfromafflictions="true" />
     <huskappendage affliction="fractalGuardianEyesAffliction" path="%ModDir%/transplants/organs/fractalguardian/fractalGuardianEyeAppendage.xml" onlyfromafflictions="True" />
     <huskappendage affliction="huskArmAffliction" path="%ModDir%/transplants/limbs/husk/huskArmAppendage.xml" onlyfromafflictions="true" />
     <huskappendage affliction="broodmotherLiverAffliction" path="%ModDir%/transplants/organs/broodmother/broodmotherLiverAttack.xml" onlyfromafflictions="true" />
@@ -21,7 +21,7 @@
     <huskappendage affliction="watcherEyesAffliction" path="%ModDir%/transplants/organs/watcher/watcherEyeAppendage.xml" onlyfromafflictions="true" />
     <huskappendage affliction="latcherTongueAffliction" path="%ModDir%/transplants/limbs/latcher/latcherTongueAppendage.xml" onlyfromafflictions="true" />
     <huskappendage affliction="charybdisJawAffliction" path="%ModDir%/transplants/limbs/charybdis/charybdisJaw.xml" onlyfromafflictions="true" />
-    <huskappendage affliction="orangeboyTailAffliction" path="%ModDir%/transplants/limbs/orangeboy/orangeboyTailAppendage.xml" onlyfromaffliction="true" />
+    <huskappendage affliction="orangeboyTailAffliction" path="%ModDir%/transplants/limbs/orangeboy/orangeboyTailAppendage.xml" onlyfromafflictions="true" />
 
 
 

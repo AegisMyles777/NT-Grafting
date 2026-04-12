@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<contentpackage name="AegisGrafting" modversion="1.3.2" corepackage="False" steamworkshopid="3534702008" gameversion="1.11.5.0">
+<contentpackage name="AegisGrafting" modversion="1.3.3" corepackage="False" steamworkshopid="3534702008" gameversion="1.11.5.0">
   <Item file="%ModDir%/medicalItems/dnaLigationEnhancer.xml" />
   <Item file="%ModDir%/medicalItems/dnaSplicer.xml" />
   <Item file="%ModDir%/medicalItems/alienScalpels.xml" />
