@@ -43,9 +43,10 @@ Updates will likely slow, as I am becoming more busy.
 
 Please report any bugs found. I will try to fix what I can.
 
-
 Many organ assets and the scalpel assets were taken and modified from original Neurotrauma, thank you for the art.
 
+Special thanks to the following people for contributing to the code:
+-BigEvilGreenBean
 
 This mod took a large amount of time and dedication to properly develop. If you enjoy the mod, and want to support me for the time it took to develop, please consider donating to the bitcoin wallet below:
 bc1qwqf5kjf9dcf9zzp2n3f5qu4k3cxs2al6x69u4fgv5kmq9v3hcpnsfx92hz
