@@ -7,98 +7,56 @@ NT.Afflictions.hybriddna = {
     if (HF.HasAffliction(c.character,"crossspeciesrejection",1)) then
       local creatures = 0
 
-      --Written in a very sparatic way
-      --attempted to sort blocks by creatures since you can't get multiple stacks from 1 species
-      --then, if a creature had no crossover I tried to connect afflictions that can't overlap,
-      --like the same organs, jaws, and eyes.
-      
-      --All done in an attempt to cause the fewest if statements per check as possible
-
-      if (HF.HasAffliction(c.character,"crawlerTailAegis",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"crawlerLungsAffliction",1)) then
-        creatures=creatures+1
-      end
-
-      if (HF.HasAffliction(c.character,"fractalGuardianEyesAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"watcherEyesAffliction",1)) then
-        creatures=creatures+1
-      end
-
-
-      if (HF.HasAffliction(c.character,"huskArmAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"huskHeartAffliction",1)) then
-        creatures=creatures+1
+      local function AddCreatureMark() -- Rather then doign a augmented assignment every where we just reference this instead.
+          creatures=creatures+1
       end
       
-      if (HF.HasAffliction(c.character,"latcherHeartAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"latcherTongueAffliction",1)) then
-        creatures=creatures+1
-      end
+      -- Grafting Types is a table containing our possible grafts, each row has a 'parent' graft and it's alternatives.
+      -- If one graft is identified from a table then it skips the rest and moves onto the next row.
 
-      if (HF.HasAffliction(c.character,"mantisLiverAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"broodmotherLiverAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"viperlingLiverAffliction",1)) then
-        creatures=creatures+1
-      end
-
-
-      if (HF.HasAffliction(c.character,"mudraptorLungsAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"mudraptorHeadAffliction",1)) then
-        creatures=creatures+1
-      end
-
-
-      if (HF.HasAffliction(c.character,"tigerThresherJawAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"tigerThresherTailAffliction",1)) then
-        creatures=creatures+1
-      end
+      local GraftingTypes = {
+                            {Parent="crawlerTailAegis",Child="crawlerLungsAffliction"                 -- Crawler
+                          },
+                            {Parent="fractalGuardianEyesAffliction",Child="watcherEyesAffliction"     -- Eyes
+                          },
+                            {Parent="huskArmAffliction",Child="huskHeartAffliction"                   -- Husk
+                          },
+                            {Parent="latcherHeartAffliction",Child="latcherTongueAffliction"          -- Latcher
+                          },
+                            {Parent="mantisLiverAffliction",Child="broodmotherLiverAffliction",       -- Liver
+                            Child2="viperlingLiverAffliction"
+                          },
+                            {Parent="mudraptorLungsAffliction",Child="mudraptorHeadAffliction"        -- Mudraptor
+                          },
+                            {Parent="tigerThresherJawAffliction",Child="tigerThresherTailAffliction"  -- Tiger Thresher
+                          },
+                            {Parent="boneThresherJawAffliction",Child="charybdisJawAffliction"        -- Jaw
+                          },
+                            {Parent="hammerheadTorsoAffliction",Child="hammerheadLimbsAffliction"     -- Hammerhead
+                          },
+                            {Parent="endwormTorsoAffliction",Child="endwormLArmAffliction",           -- Endworm
+                            Child2="endwormRArmAffliction",Child3="endwormLLegAffliction",
+                            Child4="endwormRLegAffliction"
+                          },
+                            {Parent="molochHeadAffliction",Child="molochCracked"                      -- Moloch
+                          },
+                            {Parent="orangeboyTailAffliction"}                                        -- Tail?
+                          }
       
-      if (HF.HasAffliction(c.character,"boneThresherJawAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"charybdisJawAffliction",1)) then
-        creatures=creatures+1
-      end
+      for Key, Value in pairs(GraftingTypes) do -- We iterate through our graft types using this structure, which is much more compact and easy to mainatain.
 
-      if (HF.HasAffliction(c.character,"hammerheadTorsoAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"hammerheadLimbsAffliction",1)) then
-        creatures=creatures+1
-      end
+        for GraftKey, GraftName in pairs(Value) do
 
-      if (HF.HasAffliction(c.character,"endwormTorsoAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"endwormLArmAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"endwormRArmAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"endwormLLegAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"endwormRLegAffliction",1)) then
-        creatures=creatures+1
-      end
+          if (HF.HasAffliction(c.character,GraftName,1)) then
+            AddCreatureMark()
+            break -- Incase we do have the affliction we break and move onto the next graft type. Keeps the old functionality.
 
-      if (HF.HasAffliction(c.character,"molochHeadAffliction",1)) then
-        creatures=creatures+1
-      elseif (HF.HasAffliction(c.character,"molochCracked",1)) then
-        creatures=creatures+1
+          end
       end
-
-      if (HF.HasAffliction(c.character,"orangeboyTailAffliction",1)) then
-        creatures=creatures+1
-      end
-
-      HF.SetAffliction(c.character,"hybriddna",creatures)
+        
+      HF.SetAffliction(c.character,"hybriddna",creatures) -- I'm not too sure what this is needed for but I'll keep it lol.
 
     end
-
 
       if c.afflictions[i].strength >= 2 and not HF.HasTalent(c.character,"tolerantdna") and not HF.HasTalent(c.character, "hackeddna") then
         HF.SetAffliction(c.character,"crossspeciesrejection",100)
@@ -108,7 +66,8 @@ NT.Afflictions.hybriddna = {
         HF.SetAffliction(c.character,"hybriddnakiller",100)
       end
 
-  end,
+  end
+end
 }
 
 

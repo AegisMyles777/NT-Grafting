@@ -1,4 +1,6 @@
 # NT-Grafting
+<img width="250" height="250" alt="NTGrafting" src="https://github.com/user-attachments/assets/6a931831-8090-410d-bea1-a55effea23ce" />
+
 A mod for the game Barotrauma
 
 A Neurotrauma extension mod for taking the limbs and organs from the creatures of Europa and grafting them onto yourself. Experience the benefits of the creatures you fight, and with them, the difficulties that come from mixing DNA.
